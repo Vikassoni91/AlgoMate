@@ -9,7 +9,6 @@ const { parse } = require("path");
 const fs = require("fs")
 
 
-
 //creating server 
 const app = express()
 app.use(express.json());
