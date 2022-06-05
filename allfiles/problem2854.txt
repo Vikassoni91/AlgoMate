@@ -1,0 +1,1 @@
+b'Given 3 positives numbers a, b and c. Return the minimum flips required in some bits of a and b to make (\xc2\xa0a OR b == c\xc2\xa0). (bitwise OR operation).\nFlip operation\xc2\xa0consists of change\xc2\xa0any\xc2\xa0single bit 1 to 0 or change the bit 0 to 1\xc2\xa0in their binary representation.'

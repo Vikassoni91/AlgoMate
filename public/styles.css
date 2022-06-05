@@ -1,0 +1,167 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(255, 255, 255);
+}
+
+#icon1{
+    /* background-color: red; */
+    height:100%;
+    width:108px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon {
+    color:yellow;
+    border: 4px solid red;
+    width: 100%;
+    height: 49px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 21px;
+}
+
+.bar{
+    display: flex;
+    background-color: white;
+    width: 560px;
+    height: 38px;
+    border-radius: 19px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+nav .search_bar {
+    display: flex;
+    margin: 15px 40px 10px 100px;
+    height: 35px;
+    line-height: 30px;
+}
+
+
+nav{
+    display: flex;
+    position: relative;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    height:70px;
+    padding: 0px 0px 0px 10px;
+    justify-content:flex-start;
+}
+
+#question{
+    height: 27px;
+    width: 459px;
+    padding-left:17px;
+    background-color: white;
+     margin:0px;
+     border: none;
+     outline:none;
+     resize:none;
+     
+}
+
+#button{
+    font-weight: bold;
+    height: 27px;
+    width: 53px;
+    margin: 0px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+    margin-left:5px;
+}
+
+#button:hover{
+ /* font-weight: bold; */
+ color:red;
+}
+
+.loading{
+    margin: auto 15px;
+}
+
+.title{
+    font-size: 22px;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.url{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.body{
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.question{
+    width:80%;
+    margin: 10px auto 40px auto;
+}
+
+@media(max-width: 830px){
+    .bar{
+        width: 230%;
+    }
+    #question{
+        width:70%;
+    }
+
+    nav .search_bar {
+        margin: 15px 2px 10px 5px;
+    }
+
+    .loading{
+        display:none;
+        margin: 0px;
+    }
+  .searchBar{
+      width: calc(100%-110px);
+      /* background-color: red; */
+  }
+  
+}
+
+@media(max-width: 450px) {
+    .bar {
+        width: 100%;
+    }
+
+    #question {
+        width: 70%;
+    }
+
+    nav .search_bar {
+        margin: 15px 2px 10px 5px;
+    }
+
+    .loading {
+        display: none;
+        margin: 0px;
+    }
+
+    .searchBar {
+        width: calc(100%-110px);
+        /* background-color: red; */
+    }
+
+}

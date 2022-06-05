@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFlex</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- <h1>CodeFlex</h1> -->
+
+    <nav>
+        <div id="icon1">
+            <div id="icon">CodeFlex</div>
+        </div>
+        <div class="searchBar">
+            <div class="search_bar">
+                <form action="" class="searching">
+                    <div class="bar">
+                        <input type="text" name="question" id="question" placeholder="Search Your Question Here">
+                        <!-- <input type="submit" value="Ask me" id="button"> -->
+                        <button id="button">Ask Me</button>
+                    </div>
+                </form>
+                <div class="loading" style="color: white;"></div>
+            </div>
+            <div class="loading"></div>
+        </div>
+    </nav>
+
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+            <a href="" target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href="" target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href="" target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+    <div class="question">
+        <div class="title"></div>
+        <div class="body"></div>
+        <div class="url">
+        <a href=""  target="_blank"></a>
+        </div>
+    </div>
+ 
+</body>
+
+</html>
+
+<script>
+    const form = document.querySelector("form");
+    const questionElement = form.question;
+
+    const questions = document.querySelectorAll(".question")
+    const titles = document.querySelectorAll(".title")
+    const urls = document.querySelectorAll(".url")
+    const quesBody = document.querySelectorAll(".body")
+    const loadingDiv = document.querySelector(".loading")
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        question = questionElement.value;
+        for (i = 0; i < 10; i++) {
+            titles[i].innerHTML = ``;
+            urls[i].innerHTML = ``;
+            quesBody[i].innerHTML = ``;
+        }
+
+
+        loadingDiv.innerHTML = `loading...`;
+
+        // console.log(questions);
+        // console.log(titles);
+        // console.log(urls);
+        // console.log(quesBody);
+
+        //fetch 
+        try {
+            const res = await fetch(`/search?question=${question}`, { method: "GET" })
+            const data = await res.json();
+            loadingDiv.innerHTML = ``
+            for (i = 0; i < 10; i++) {
+                //  titles[i].textContent = `${data[i].title}`;
+                titles[i].innerHTML=`<h3>${data[i].title}</h3>`;
+                urls[i].innerHTML = `<a href="${data[i].url}" target="_blank">${data[i].url}</a>`;
+                quesBody[i].innerHTML = `<p>${data[i].statement}</p>`
+            }
+            
+        } catch (error) {
+            alert(error);
+        }
+
+        //  console.log(data);
+
+    })
+</script>
