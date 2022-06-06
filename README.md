@@ -15,7 +15,7 @@ https://dsa-codeflex-search.herokuapp.com/
 
 ## Acknowledgements
 
-This Project is Part of AZ INTERNAL HACKATHON
+This Project is part of AZ INTERNAL HACKATHON
 
 
 ## Deployment
